@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Ephrem Getachew - Professional Video Editing Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css"> <!-- Link to external CSS file -->
+    <style>
+        /* Basic Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        nav a:hover {
+            background: #f4b400;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        /* Main Sections */
+        main section {
+            padding: 40px 0;
+        }
+        #about {
+            text-align: center;
+        }
+        #about h2, #portfolio h2, #services h2, #contact h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .profile-img {
+            width: 150px;
+            border-radius: 50%;
+            margin-top: 15px;
+        }
+        #about p {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 20px auto;
+            line-height: 1.8;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            background: #fff;
+        }
+        .project {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .project img {
+            width: 100%;
+            max-width: 300px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .project img:hover {
+            transform: scale(1.05);
+        }
+        .project h3 {
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+        .project p {
+            font-size: 1em;
+            color: #666;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* Services Section */
+        #services {
+            background: #f4f4f4;
+            text-align: center;
+        }
+        #services ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        #services li {
+            max-width: 180px;
+        }
+        #services img {
+            width: 80px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        #services img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+        #services p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+        }
+        #contact p {
+            font-size: 1.2em;
+        }
+        #contact a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        #contact a:hover {
+            color: #f4b400;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #333;
+            color: #fff;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            #services ul {
+                flex-direction: column;
+            }
+            .profile-img {
+                width: 100px;
+            }
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Rafael Ephrem Getachew</h1>
+            <p>Professional Video Editor & Content Creator</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="images/profile.jpg" alt="Rafael Ephrem Getachew" class="profile-img">
+            <p>I’m Rafael Ephrem Getachew, a video editor and content creator based in Addis Ababa, Ethiopia. My passion lies in creating visually engaging content that tells powerful stories. Whether you're a business looking to elevate your brand or an influencer aiming to capture attention, I bring expertise, creativity, and a drive for perfection to every project.</p>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2>My Work</h2>
+            <div class="project">
+                <img src="images/project1.jpg" alt="Project 1" class="project-img" data-lightbox="lightbox">
+                <h3>Project Title 1</h3>
+                <p>A brief description of the project, your role, and its impact on the client’s goals.</p>
+            </div>
+            <div class="project">
+                <img src="images/project2.jpg" alt="Project 2" class="project-img" data-lightbox="lightbox">
+                <h3>Project Title 2</h3>
+                <p>A description of another project that highlights your skills and creativity.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Services</h2>
+            <ul>
+                <li>
+                    <img src="images/videoediting.png" alt="Video Editing">
+                    <p>Video Editing</p>
+                </li>
+                <li>
+                    <img src="images/content.png" alt="Content Creation">
+                    <p>Content Creation</p>
+                </li>
+                <li>
+                    <img src="images/socialmedia.png" alt="Social Media Marketing">
+                    <p>Social Media Marketing</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:rafaelephrem@gmail.com">rafaelephrem@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/rafael-ephrem-getachew">Rafael Ephrem</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rafael Ephrem Getachew. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox Container -->
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="Expanded Image">
+    </div>
+
+    <script>
+        // Lightbox functionality
+        const projectImages = document.querySelectorAll('.project-img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = lightbox.querySelector('img');
+
+        projectImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImage.src = img.src;
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
+/* Basic styling for body, header, sections, etc. */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+/* Sections */
+main section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#about, #services, #portfolio, #contact {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+/* Portfolio Projects */
+.project {
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Services Section */
+#services ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+#services li {
+    max-width: 200px;
+}
+
+#services img {
+    width: 80px;
+    transition: filter 0.3s ease;
+}
+
+#services li p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Contact Section */
+#contact a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #333;
+    color: #fff;
+}
+
+/* Hover effects */
+.project img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+#services li img:hover {
+    filter: brightness(1.2);
+    transition: filter 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f4b400;
+    transition: color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #services ul {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+}
